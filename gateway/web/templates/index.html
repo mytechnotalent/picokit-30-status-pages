@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Picokit Gateway</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <style>
+    body { margin: 0; background: #04120b; color: #f2f5ff;
+           font-family: -apple-system, Helvetica, Arial, sans-serif; }
+    header { padding: 1rem 1.5rem; border-bottom: 1px solid #123;
+             color: #39ff88; letter-spacing: 0.08em; }
+    main { display: grid; gap: 1rem; padding: 1.5rem;
+           grid-template-columns: 2fr 1fr; }
+    .card { background: #071a10; border: 1px solid #123; border-radius: 8px;
+            padding: 1rem; }
+    h2 { margin: 0 0 0.75rem; font-size: 0.9rem; color: #7fd8e0;
+         text-transform: uppercase; letter-spacing: 0.1em; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+    th, td { text-align: left; padding: 0.35rem 0.5rem;
+             border-bottom: 1px solid #103; }
+    th { color: #6f8f7c; font-weight: 600; }
+    #chart-wrap { grid-column: 1 / -1; }
+  </style>
+</head>
+<body>
+  <header>PICOKIT GATEWAY // AUTHENTICATED TELEMETRY</header>
+  <main>
+    <section class="card" id="chart-wrap">
+      <h2>Temperature and Humidity</h2>
+      <canvas id="climate" height="90"></canvas>
+    </section>
+    <section class="card">
+      <h2>Nodes</h2>
+      <table id="nodes"><thead><tr>
+        <th>Node</th><th>Temp C</th><th>Hum %</th><th>RSSI</th>
+      </tr></thead><tbody></tbody></table>
+    </section>
+    <section class="card">
+      <h2>Events</h2>
+      <table id="events"><thead><tr>
+        <th>UTC</th><th>Node</th><th>Kind</th><th>Detail</th>
+      </tr></thead><tbody></tbody></table>
+    </section>
+  </main>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

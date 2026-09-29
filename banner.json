@@ -1,0 +1,68 @@
+{
+  "repo": "picokit-30-status-pages",
+  "eyebrow": "PICOKIT // LESSON 30",
+  "title": "PICOKIT // STATUS PAGES",
+  "subtitle": "BUTTON + REMOTE PAGES + AUTHENTICATED HEARTBEAT",
+  "accent": "#47E0FF",
+  "dim": "#2C8A9E",
+  "white": "#DAF2FF",
+  "cyan": "#7FD8E0",
+  "bg": "#040F11",
+  "bg_edge": "#010405",
+  "icon": "lcd",
+  "panel_status": "PAGE 2/3  ·  SENSOR  ·  AEAD :ON",
+  "chips": [
+    {
+      "label": "INPUT",
+      "value": "2"
+    },
+    {
+      "label": "PAGE",
+      "value": "2 / 3"
+    },
+    {
+      "label": "KEY",
+      "value": "argon2id"
+    },
+    {
+      "label": "RADIO",
+      "value": "-35 dBm"
+    }
+  ],
+  "terminal": [
+    "$ gateway listen /dev/cu.usbserial-A50285BI",
+    "[*] node 00030  seq 18  HEARTBEAT  AEAD ok",
+    "[*] anti-replay window ok  counter 18",
+    "[+] button press  page 2 sensor  lcd render",
+    "[+] ack sent  rssi -35  snr 9.0"
+  ],
+  "categories": [
+    "BUTTON",
+    "REMOTE",
+    "SECURE",
+    "LINK"
+  ],
+  "cards": [
+    {
+      "tag": "PG-01",
+      "label": "status",
+      "value": "1 / 3"
+    },
+    {
+      "tag": "PG-02",
+      "label": "sensor",
+      "value": "2 / 3"
+    },
+    {
+      "tag": "PG-03",
+      "label": "radio",
+      "value": "3 / 3"
+    }
+  ],
+  "footer": [
+    "1 NODE  ·  1 GATEWAY  ·  2 WAY LORA  ·  NO PLAINTEXT",
+    "PICOKIT SERIES  ·  OUTPUT  ·  INPUT  ·  RADIO  ==[ PAGES ]=="
+  ],
+  "layout": "grid",
+  "stat": "2"
+}

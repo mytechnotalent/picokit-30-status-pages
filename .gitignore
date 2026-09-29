@@ -1,0 +1,11 @@
+build/
+firmware/build/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+.venv/
+gateway.db
+gateway.db
+gateway.db-wal
+gateway.db-shm
